@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import enUS from "../languages/en-US.json" assert { type: "json" };
+import enUS from "../languages/en-US.json" with { type: "json" };
 import { languages } from "../languages/index.js";
 
 export const useLang = (): [Language, (lang: string) => Promise<void>] => {

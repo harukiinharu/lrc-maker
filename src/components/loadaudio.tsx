@@ -1,4 +1,4 @@
-import SSK from "#const/session_key.json" assert { type: "json" };
+import SSK from "#const/session_key.json" with { type: "json" };
 import { useCallback, useEffect, useRef } from "react";
 import * as ReactDOM from "react-dom";
 import { AudioActionType, audioStatePubSub } from "../utils/audiomodule.js";

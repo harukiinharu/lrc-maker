@@ -1,5 +1,5 @@
-import LSK from "#const/local_key.json" assert { type: "json" };
-import STRINGS from "#const/strings.json" assert { type: "json" };
+import LSK from "#const/local_key.json" with { type: "json" };
+import STRINGS from "#const/strings.json" with { type: "json" };
 import type { TrimOptios } from "@lrc-maker/lrc-parser";
 import { createContext, useEffect, useMemo } from "react";
 import { useLang } from "../hooks/useLang.js";

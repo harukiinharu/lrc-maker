@@ -1,7 +1,7 @@
-import LSK from "#const/local_key.json" assert { type: "json" };
-import ROUTER from "#const/router.json" assert { type: "json" };
-import SSK from "#const/session_key.json" assert { type: "json" };
-import STRINGS from "#const/strings.json" assert { type: "json" };
+import LSK from "#const/local_key.json" with { type: "json" };
+import ROUTER from "#const/router.json" with { type: "json" };
+import SSK from "#const/session_key.json" with { type: "json" };
+import STRINGS from "#const/strings.json" with { type: "json" };
 import { convertTimeToTag, stringify } from "@lrc-maker/lrc-parser";
 import { lazy, Suspense, useContext, useEffect, useRef, useState } from "react";
 import { ActionType as LrcActionType, useLrc } from "../hooks/useLrc.js";

@@ -1,5 +1,5 @@
-import LINK from "#const/link.json" assert { type: "json" };
-import STRINGS from "#const/strings.json" assert { type: "json" };
+import LINK from "#const/link.json" with { type: "json" };
+import STRINGS from "#const/strings.json" with { type: "json" };
 import { convertTimeToTag, formatText } from "@lrc-maker/lrc-parser";
 import { useCallback, useContext, useEffect, useMemo, useRef } from "react";
 import { themeColor, ThemeMode } from "../hooks/usePref.js";

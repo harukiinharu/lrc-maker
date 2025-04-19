@@ -1,7 +1,7 @@
-import GISTINFO from "#const/gist_info.json" assert { type: "json" };
-import LSK from "#const/local_key.json" assert { type: "json" };
-import ROUTER from "#const/router.json" assert { type: "json" };
-import SSK from "#const/session_key.json" assert { type: "json" };
+import GISTINFO from "#const/gist_info.json" with { type: "json" };
+import LSK from "#const/local_key.json" with { type: "json" };
+import ROUTER from "#const/router.json" with { type: "json" };
+import SSK from "#const/session_key.json" with { type: "json" };
 import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { type Action as LrcAction, ActionType as LrcActionType } from "../hooks/useLrc.js";
 import type { IGistFile, IGistRepo, Ratelimit } from "../utils/gistapi.js";

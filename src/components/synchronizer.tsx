@@ -1,5 +1,5 @@
-import SSK from "#const/session_key.json" assert { type: "json" };
-import STRINGS from "#const/strings.json" assert { type: "json" };
+import SSK from "#const/session_key.json" with { type: "json" };
+import STRINGS from "#const/strings.json" with { type: "json" };
 import { convertTimeToTag, formatText, type ILyric } from "@lrc-maker/lrc-parser";
 import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import type { IState } from "../hooks/useLrc.js";
