@@ -36,9 +36,7 @@ export const Footer: React.FC = () => {
 
     useEffect(() => {
         function onKeydown(ev: KeyboardEvent) {
-            const { code, key, target } = ev;
-
-            const codeOrKey = code || key;
+            const { code, target } = ev;
 
             if (isKeyboardElement(target)) {
                 return;
@@ -48,39 +46,28 @@ export const Footer: React.FC = () => {
                 return;
             }
 
-            if (ev.metaKey || ev.ctrlKey) {
-                if (["ArrowUp", "KeyJ", "Up", "J", "j"].includes(codeOrKey)) {
-                    ev.preventDefault();
-
-                    const rate = audioRef.playbackRate;
-                    const newRate = Math.exp(Math.min(Math.log(rate) + 0.2, 1));
-
-                    audioRef.playbackRate = newRate;
-                } else if (["ArrowDown", "KeyK", "Down", "K", "k"].includes(codeOrKey)) {
-                    ev.preventDefault();
-
-                    const rate = audioRef.playbackRate;
-                    const newRate = Math.exp(Math.max(Math.log(rate) - 0.2, -1));
-
-                    audioRef.playbackRate = newRate;
-                } else if (codeOrKey === "Enter") {
-                    ev.preventDefault();
-                    audioRef.toggle();
-                }
-            } else {
-                if (["ArrowLeft", "KeyA", "KeyH", "Left", "A", "a", "H", "h"].includes(codeOrKey)) {
-                    ev.preventDefault();
-
-                    audioRef.step(ev, -5);
-                } else if (["ArrowRight", "KeyD", "KeyL", "Right", "D", "d", "L", "l"].includes(codeOrKey)) {
-                    ev.preventDefault();
-
-                    audioRef.step(ev, 5);
-                } else if (code === "KeyR" || key === "R" || key === "r") {
-                    ev.preventDefault();
-
-                    audioRef.playbackRate = 1;
-                }
+            if (code === "KeyL") {
+                ev.preventDefault();
+                const rate = audioRef.playbackRate;
+                const newRate = Math.exp(Math.min(Math.log(rate) + 0.2, 1));
+                audioRef.playbackRate = newRate;
+            } else if (code === "KeyK") {
+                ev.preventDefault();
+                audioRef.playbackRate = 1;
+            } else if (code === "KeyJ") {
+                ev.preventDefault();
+                const rate = audioRef.playbackRate;
+                const newRate = Math.exp(Math.max(Math.log(rate) - 0.2, -1));
+                audioRef.playbackRate = newRate;
+            } else if (code === "KeyA") {
+                ev.preventDefault();
+                audioRef.step(ev, -3);
+            } else if (code === "KeyD") {
+                ev.preventDefault();
+                audioRef.step(ev, 3);
+            } else if (code === "Space") {
+                ev.preventDefault();
+                audioRef.toggle();
             }
         }
         document.addEventListener("keydown", onKeydown);

@@ -31,19 +31,21 @@ Development branch links:
 
 ## Hotkeys
 
-|                             key                             |         function         |
-| :---------------------------------------------------------: | :----------------------: |
-|                      <kbd>space</kbd>                       |  insert time stamp tag   |
-|   <kbd>backspace</kbd> / <kbd>delete</kbd> / <kbd>⌫</kbd>   |  remove time stamp tag   |
-| <kbd>ctrl</kbd><kbd>enter↵</kbd> / <kbd>⌘</kbd><kbd>↩</kbd> |       play / pause       |
-|                 <kbd>←</kbd> / <kbd>A</kbd>                 | step backward 5 seconds  |
-|                 <kbd>→</kbd> / <kbd>D</kbd>                 |  step forward 5 seconds  |
-|         <kbd>↑</kbd> / <kbd>W</kbd> / <kbd>J</kbd>          |   select previous line   |
-|         <kbd>↓</kbd> / <kbd>S</kbd> / <kbd>K</kbd>          |     select next line     |
-|                 <kbd>-</kbd> / <kbd>+</kbd>                 | adjust selected time tag |
-|   <kbd>ctrl</kbd><kbd>↑</kbd> / <kbd>⌘</kbd><kbd>↑</kbd>    |  speed up playback rate  |
-|   <kbd>ctrl</kbd><kbd>↓</kbd> / <kbd>⌘</kbd><kbd>↓</kbd>    | speed down playback rate |
-|                        <kbd>R</kbd>                         |   reset playback rate    |
+|                           key                           |         function         |
+| :-----------------------------------------------------: | :----------------------: |
+|                    <kbd>enter</kbd>                     |  insert time stamp tag   |
+| <kbd>backspace</kbd> / <kbd>delete</kbd> / <kbd>⌫</kbd> |  remove time stamp tag   |
+|                    <kbd>space</kbd>                     |       play / pause       |
+|                      <kbd>A</kbd>                       | step backward 3 seconds  |
+|                      <kbd>D</kbd>                       |  step forward 3 seconds  |
+|                      <kbd>W</kbd>                       |   select previous line   |
+|                      <kbd>S</kbd>                       |     select next line     |
+|       <kbd>-</kbd> / <kbd>+</kbd> / <kbd>0</kbd>        | adjust selected time tag |
+|                      <kbd>L</kbd>                       |  speed up playback rate  |
+|                      <kbd>J</kbd>                       | speed down playback rate |
+|                      <kbd>K</kbd>                       |   reset playback rate    |
+|           <kbd>ctrl/cmd</kbd> + <kbd>↑</kbd>            |      scroll to top       |
+|           <kbd>ctrl/cmd</kbd> + <kbd>↓</kbd>            |     scroll to bottom     |
 
 ## Compatibility
 
@@ -73,23 +75,23 @@ If you want to run this project on your computer locally, follow the tips.
 
 ```bash
 # clone this repo
-git clone https://github.com/magic-akari/lrc-maker.git
+git clone https://github.com/harukiinharu/lrc-maker.git
 
 cd lrc-maker
 
 # install dependencies
-npm i
+pnpm i
+
+# dev
+pnpm d
 
 # build
-npm run build
-
-# or build with watch mode
-npm start
+pnpm b
 ```
 
 ## Deployment in Production
 
-After building (`npm run build`), the `build` folder is the static website files.
+After building (`pnpm b`), the `build` folder is the static website files.
 You can deploy it to any CDN or static file server.
 
 You can also build a docker image using the `Dockerfile` at the root of this repo.

@@ -113,70 +113,42 @@ export const Synchronizer: React.FC<ISynchronizerProps> = ({ state, dispatch }) 
         function onKeydown(ev: KeyboardEvent): void {
             const { code, key, target } = ev;
 
-            const codeOrKey = code || key;
-
             if (isKeyboardElement(target)) {
                 return;
             }
 
-            if (codeOrKey === "Backspace" || codeOrKey === "Delete" || codeOrKey === "Del") {
+            if (code === "Backspace" || code === "Delete" || code === "Del") {
                 ev.preventDefault();
-                dispatch({
-                    type: ActionType.deleteTime,
-                    payload: undefined,
-                });
-                return;
-            }
-
-            if (code === "Digit0" || key === "0") {
+                dispatch({ type: ActionType.deleteTime, payload: undefined });
+            } else if (code === "Digit0" || key === "0") {
                 ev.preventDefault();
                 adjust(ev, 0, selectIndex);
-                return;
-            }
-
-            if (code === "Minus" || key === "-" || key === "_") {
+            } else if (code === "Minus" || key === "-" || key === "_") {
                 ev.preventDefault();
                 adjust(ev, -0.5, selectIndex);
-                return;
-            }
-
-            if (code === "Equal" || key === "+" || key === "=") {
+            } else if (code === "Equal" || key === "+" || key === "=") {
                 ev.preventDefault();
                 adjust(ev, 0.5, selectIndex);
-                return;
-            }
-
-            if (ev.metaKey || ev.ctrlKey) {
-                return;
-            }
-
-            if (code === "Space" || key === " " || key === "Spacebar") {
+            } else if (code === "Enter") {
                 ev.preventDefault();
-
                 sync();
-            } else if (["ArrowUp", "KeyW", "KeyJ", "Up", "W", "w", "J", "j"].includes(codeOrKey)) {
+            } else if (code === "KeyW") {
                 ev.preventDefault();
-
                 dispatch({ type: ActionType.select, payload: (index) => index - 1 });
-            } else if (["ArrowDown", "KeyS", "KeyK", "Down", "S", "s", "K", "k"].includes(codeOrKey)) {
+            } else if (code === "KeyS") {
                 ev.preventDefault();
-
                 dispatch({ type: ActionType.select, payload: (index) => index + 1 });
-            } else if (codeOrKey === "Home") {
+            } else if ((ev.metaKey || ev.ctrlKey) && code === "ArrowUp") {
                 ev.preventDefault();
-
                 dispatch({ type: ActionType.select, payload: () => 0 });
-            } else if (codeOrKey === "End") {
+            } else if ((ev.metaKey || ev.ctrlKey) && code === "ArrowDown") {
                 ev.preventDefault();
-
                 dispatch({ type: ActionType.select, payload: () => Infinity });
-            } else if (codeOrKey === "PageUp") {
+            } else if (code === "PageUp") {
                 ev.preventDefault();
-
                 dispatch({ type: ActionType.select, payload: (index) => index - 10 });
-            } else if (codeOrKey === "PageDown") {
+            } else if (code === "PageDown") {
                 ev.preventDefault();
-
                 dispatch({ type: ActionType.select, payload: (index) => index + 10 });
             }
         }
