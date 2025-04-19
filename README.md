@@ -41,6 +41,8 @@ Development branch links:
 |                      <kbd>W</kbd>                       |   select previous line   |
 |                      <kbd>S</kbd>                       |     select next line     |
 |       <kbd>-</kbd> / <kbd>+</kbd> / <kbd>0</kbd>        | adjust selected time tag |
+|                      <kbd>1</kbd>                       |     open editor page     |
+|                      <kbd>2</kbd>                       |  open synchronizer page  |
 |                      <kbd>L</kbd>                       |  speed up playback rate  |
 |                      <kbd>J</kbd>                       | speed down playback rate |
 |                      <kbd>K</kbd>                       |   reset playback rate    |

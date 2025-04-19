@@ -31,19 +31,23 @@
 
 ## 热键
 
-|                            按键                             |        功能        |
-| :---------------------------------------------------------: | :----------------: |
-|                      <kbd>space</kbd>                       |    插入时间标签    |
-|   <kbd>backspace</kbd> / <kbd>delete</kbd> / <kbd>⌫</kbd>   |    移除时间标签    |
-| <kbd>ctrl</kbd><kbd>enter↵</kbd> / <kbd>⌘</kbd><kbd>↩</kbd> |    播放 / 暂停     |
-|                 <kbd>←</kbd> / <kbd>A</kbd>                 |     回退 5 秒      |
-|                 <kbd>→</kbd> / <kbd>D</kbd>                 |     前进 5 秒      |
-|         <kbd>↑</kbd> / <kbd>W</kbd> / <kbd>J</kbd>          |     选择上一行     |
-|         <kbd>↓</kbd> / <kbd>S</kbd> / <kbd>K</kbd>          |     选择下一行     |
-|                 <kbd>-</kbd> / <kbd>+</kbd>                 | 当前行时间标签微调 |
-|   <kbd>ctrl</kbd><kbd>↑</kbd> / <kbd>⌘</kbd><kbd>↑</kbd>    |    提高播放速度    |
-|   <kbd>ctrl</kbd><kbd>↓</kbd> / <kbd>⌘</kbd><kbd>↓</kbd>    |    降低播放速度    |
-|                        <kbd>R</kbd>                         |    重置播放速度    |
+|                          按键                            |           功能           |
+| :-----------------------------------------------------: | :----------------------: |
+|                    <kbd>enter</kbd>                     |        插入时间标签        |
+| <kbd>backspace</kbd> / <kbd>delete</kbd> / <kbd>⌫</kbd> |        移除时间标签        |
+|                    <kbd>space</kbd>                     |        播放 / 暂停        |
+|                      <kbd>A</kbd>                       |         回退 3 秒         |
+|                      <kbd>D</kbd>                       |         前进 3 秒         |
+|                      <kbd>W</kbd>                       |         选择上一行         |
+|                      <kbd>S</kbd>                       |         选择下一行         |
+|       <kbd>-</kbd> / <kbd>+</kbd> / <kbd>0</kbd>        |      调整选中行时间标签     |
+|                      <kbd>1</kbd>                       |       打开编辑器页面        |
+|                      <kbd>2</kbd>                       |       打开同步器页面       |
+|                      <kbd>L</kbd>                       |        提高播放速度        |
+|                      <kbd>J</kbd>                       |        降低播放速度        |
+|                      <kbd>K</kbd>                       |        重置播放速度        |
+|           <kbd>ctrl/cmd</kbd> + <kbd>↑</kbd>            |         滚动到顶部         |
+|           <kbd>ctrl/cmd</kbd> + <kbd>↓</kbd>            |         滚动到底部         |
 
 ## 兼容性
 

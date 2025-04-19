@@ -38,6 +38,16 @@ export const Footer: React.FC = () => {
         function onKeydown(ev: KeyboardEvent) {
             const { code, target } = ev;
 
+            // console.log(code);
+
+            if (code === "Digit1") {
+                ev.preventDefault();
+                window.location.href = "#/editor/";
+            } else if (code === "Digit2") {
+                ev.preventDefault();
+                window.location.href = "#/synchronizer/";
+            }
+
             if (isKeyboardElement(target)) {
                 return;
             }
