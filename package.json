@@ -17,12 +17,11 @@
         "src",
         "build"
     ],
-    "packageManager": "pnpm@10.11.0",
     "type": "module",
     "scripts": {
         "d": "vite",
         "b": "vite build",
-        "p": "pnpx http-server build -a localhost -p 5173",
+        "p": "http-server build -a localhost -p 5173 -o",
         "fix:fmt": "dprint fmt",
         "check:fmt": "dprint check",
         "check:lint": "oxlint src -D correctness"
